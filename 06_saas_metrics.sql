@@ -1,6 +1,9 @@
 /* SCRIPT: 06_saas_metrics_calculation.sql
 OBJECTIVE: Transform activity logs into SaaS North Star Metrics.
-NOTE: 'Inactivity' is used as a Churn Proxy due to the lack of explicit cancellation events.
+
+ASSUMPTION: One record = one active user event. 
+In a real SaaS context, user_id would replace car_model-level aggregation.
+Inactivity is used as a Churn Proxy due to lack of explicit cancellation events.
 */
 
 WITH metrics_base AS (
@@ -30,4 +33,5 @@ SELECT
     ) as revenue_exposure_usd
 FROM metrics_base
 WHERE total_users > 10 -- Filtering noise
-ORDER BY revenue_exposure_usd DESC;
+ORDER BY revenue_exposure_usd DESC
+LIMIT 20;
