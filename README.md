@@ -29,7 +29,7 @@ I translated physical service events into digital subscription concepts to demon
 | **Morning vs. Afternoon Shift** | **Server Load / Cloud Capacity** | Optimizing AWS/Azure fixed costs during idle times. |
 | **Car Models (CR-V, HR-V)** | **Subscription Tiers** | Identifying High-LTV segments for upsell. |
 
----
+
 
 ## 🧭 Project Workflow
 ```mermaid
@@ -40,7 +40,7 @@ graph TD
     D -->|Financial Modeling| E[Revenue Recovery Scenarios]
     E -->|Strategic Insight| F[Leadership Decision Making]
 
----
+
 
 ## 📂 Repository Structure & Analysis Pipeline
 
